@@ -1,0 +1,39 @@
+// IMDB movie
+//Creating movie details table 
+-- create
+
+CREATE TABLE IMDB (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  artist TEXT NOT NULL,
+  genre TEXT NOT NULL,
+  summary TEXT NOT NULL
+);
+
+//Inserting movie details values
+-- insert
+
+INSERT INTO IMDB VALUES (01, 'Vikram','Kamal Haasan,Vijay Sethupathi,Fahadh Faasil','Action','Members of a black ops team must track and eliminate a gang of masked murderers.');
+INSERT INTO IMDB VALUES (02, 'Jai Bhim','Suriya,Lijomol Jose,Rajisha Vijayan','Legal Drama','A tribal woman and a righteous lawyer battle in court to unravel the mystery around the disappearance of her husband, who was picked up the police on a false case');
+INSERT INTO IMDB VALUES (03, 'RRR', 'Ram Charan,N. T. Rama Rao Jr.,Alia Bhatt','Action','RRR is an upcoming Indian Telugu-language period action drama film directed by S. S. Rajamouli, and produced by D. V. V. Danayya of DVV Entertainments.');
+INSERT INTO IMDB VALUES (04, 'The Avengers','George Pérez,Steve Epting,Jason Aaron','Fantasy','Marvels The Avengers (classified under the name Marvel Avengers\n Assemble in the United Kingdom and Ireland), or simply The Avengers, is\n a 2012 American superhero film based on the Marvel Comics superhero team\n of the same name.');
+INSERT INTO IMDB VALUES (05, 'Baahubali','Prabhas,Rana Daggubati,Ramya Krishnan','Action','In the kingdom of Mahishmati, Shivudu falls in love with a young warrior woman. While trying to woo her, he learns about the conflict-ridden past of his family and his true legacy.');
+
+//Creating user details table
+
+CREATE TABLE users (
+  uid INTEGER,
+  uname TEXT,
+  email TEXT,
+  rating FLOAT
+);
+
+//Inserting user details values
+
+INSERT INTO users VALUES (03, 'Rahul','rahul@gmail.com', 8.5);
+INSERT INTO users VALUES (05, 'Akash','akash@gmail.com', 8);
+INSERT INTO users VALUES (02, 'Sathya','sathya@gmail.com', 8.2);
+
+//Merging two table data
+-- fetch 
+SELECT * FROM IMDB INNER JOIN users where id=uid;
